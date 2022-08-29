@@ -1,0 +1,386 @@
+﻿@page
+@model IndexModel
+
+@{
+
+    ViewData["Title"] = "Home page";
+
+
+}
+
+
+
+@* Registration part *@
+<div class="">
+    <section class="jumbotron text-center" style="background-image:url('pic1.jpg');  ">
+        <div class="container">
+            <h1>Welcome to Online Job Portal</h1>
+            <p class="lead text-muted">
+                You can find your dream jobs just by registering here.
+            </p>
+            <p>
+                <a asp-area="JobView" asp-controller="Home" asp-action="Index" class="btn btn-primary my-2">View All Jobs</a>
+            </p>
+        </div>
+
+    </section>
+</div>
+
+@*Featured Job*@
+<div class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>Featured Jobs</h2>
+                    <a asp-area="JobView" asp-controller="Home" asp-action="Index">view more <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product-item">
+                    <a asp-area="Portal" asp-controller="CandidateDetails" asp-action="Create"><img src="~/birla.jpg"></a>
+                    <div class="down-content">
+                        <a href="job-details.html"><h4>Junior Dot Net Developer</h4></a>
+
+                        <h8>CTC: &#8377 4,00,000</h8>
+
+                        <h4><small><i class="fa fa-briefcase"></i> IT Jobs <br> <strong><i class="fa fa-building"></i> Birlasoft</strong></small></h4>
+
+                        <small>
+                            <strong title="Posted on"><i class="fa fa-calendar"></i> 21-08-2022</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <strong title="Type"><i class="fa fa-file"></i> Full-Time</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <strong title="Location"><i class="fa fa-map-marker"></i> Noida, Pune</strong>
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product-item">
+                    <a asp-area="Portal" asp-controller="CandidateDetails" asp-action="Create"><img src="~/jpmc.jpg" alt=""></a>
+                    <div class="down-content">
+                        <a href="job-details.html"><h4>Software Engineering - Java Full stack - cloud</h4></a>
+
+                        <h8>CTC: Not Disclosed</h8>
+
+                        <h4><small><i class="fa fa-briefcase"></i> IT Jobs <br> <strong><i class="fa fa-building"></i> JPMC Chase & Co.</strong></small></h4>
+
+                        <small>
+                            <strong title="Posted on"><i class="fa fa-calendar"></i> 10-08-2022</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <strong title="Type"><i class="fa fa-file"></i> Full-Time</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <strong title="Location"><i class="fa fa-map-marker"></i> Hyderabad</strong>
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="product-item">
+                    <a asp-area="Portal" asp-controller="CandidateDetails" asp-action="Create"><img src="~/tcs.jpg" alt=""></a>
+                    <div class="down-content">
+                        <a href="job-details.html"><h4>Freshers Hiring</h4></a>
+
+                        <h8>CTC: &#8377 3,60,000</h8>
+
+                        <h4><small><i class="fa fa-briefcase"></i> IT Jobs <br> <strong><i class="fa fa-building"></i> Tata Consultancy Services</strong></small></h4>
+
+                        <small>
+                            <strong title="Posted on"><i class="fa fa-calendar"></i> 20-08-2022</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <strong title="Type"><i class="fa fa-file"></i> Full-Time</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <strong title="Location"><i class="fa fa-map-marker"></i> Pan India</strong>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@*About*@
+
+<div class="best-features ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h2>About Us</h2>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="left-content">
+                    <p>
+                        Online Job Portal is a global online employment solution for people seeking jobs
+                        and the employers who need great people. We've been doing this for more
+                        than 20 years, and have expanded from our roots as a "job board" to a
+                        global provider of a full array of job seeking, career management, recruitment
+                        and talent management products and services.
+
+                    </p>
+                    <ul class="featured-list">
+                        <li>
+                            <p>
+                                Headquartered in Hyderabad, Company started its operations in 2022
+                                and has presence in 11 other cities of India viz., Mumbai, Delhi, Bangalore,
+                                Chennai, Pune, Kolkata, Ahmadabad, Baroda, Chandigarh and Cochin.
+                            </p>
+
+                        </li>
+                        <li>
+                            <p>
+                                Job Portal App was voted Product of the Year under the
+                                'Mobile App Job' category in a survey of over 18000 people by Nielsen.
+                                In 2015 Monster.com was voted Product of the Year and back in 2014, mPower
+                                Search was voted Product of the Year.
+                            </p>
+                        </li>
+
+                    </ul>
+                    <a asp-area="" asp-page="/Privacy" class="filled-button">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="right-image">
+                    <img src="~/about.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+@*Testimony
+*@
+<section class="pt-5 pb-5 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h3 class="mb-3">Testimonials </h3>
+            </div>
+            <div class="col-6 text-right">
+                <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                    <i><</i>
+                </a>
+                <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                    <i>></i>
+                </a>
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active ">
+                            <div class="row">
+
+                                <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" style="height:250px;width:250px;border-radius:50%" src="~/p2.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Radhika Bhalla</h4>
+                                            <p class="card-text" style="font-size:12px">
+                                                I was looking to make a move in my career.
+                                                That’s when I heard about Online Job Portal!
+                                                I immediately applied and through online job portal and got an offer from Amazon.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" style="height:250px;width:250px; border-radius:50%" src="~/p1.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Anurag Pandey</h4>
+                                            <p class="card-text" style="font-size:12px">
+                                                I was looking to make a move in my career.
+                                                That’s when I heard about Online Job Portal!
+                                                I immediately applied and through online job portal and got an offer from Birlasoft.
+
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" style="height:250px;width:250px;border-radius:50%" src="~/p3.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Rishab Singhania </h4>
+                                            <p class="card-text" style="font-size:12px">
+                                                I was looking to make a move in my career.
+                                                That’s when I heard about Online Job Portal!
+                                                I immediately applied and through online job portal and got an offer from Tcs.
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" style="height:250px;width:250px; border-radius:50%" src="~/p2.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Radhika Bhalla</h4>
+                                            <p class="card-text" style="font-size:12px">
+                                                I was looking to make a move in my career.
+                                                That’s when I heard about Online Job Portal!
+                                                I immediately applied and through online job portal and got an offer from Infosys.
+
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" style="height:250px;width:250px;border-radius:50%" src="~/p1.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Anurag Pandey</h4>
+                                            <p class="card-text" style="font-size:12px">
+                                                I was looking to make a move in my career.
+                                                That’s when I heard about Online Job Portal!
+                                                I immediately applied and through online job portal and got an offer from JPMC.
+
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" style="height:250px;width:250px; border-radius:50%" src="~/p3.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Rishab Singhania</h4>
+                                            <p class="card-text" style="font-size:12px">
+                                                I was looking to make a move in my career.
+                                                That’s when I heard about Online Job Portal!
+                                                I immediately applied and through online job portal and got an offer from Ernst & Young.
+
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" style="height:250px;width:250px; border-radius:50%" src="~/p2.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Radhika Bhalla</h4>
+                                            <p class="card-text" style="font-size:12px">
+                                                I was looking to make a move in my career.
+                                                That’s when I heard about Online Job Portal!
+                                                I immediately applied and through online job portal and got an offer from Infosys.
+
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" style="height:250px;width:250px; border-radius:50%" src="~/p1.jpg">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Radhika Bhalla</h4>
+                                            <p class="card-text" style="font-size:12px">
+                                                I was looking to make a move in my career.
+                                                That’s when I heard about Online Job Portal!
+                                                I immediately applied and through online job portal and got an offer from Infosys.
+
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="about-veno">
+                    <div class="logo">
+                        <img src="./logo.png" width="50%" alt="Venue Logo">
+                    </div>
+                    <p>
+                        Online Job Portal is the best place for entry level and professional level candidates for job start and
+                        career change. Headquartered in Hyderabad, Company started its operations in 2022 and has presence
+                        in 11 other cities of India viz., Mumbai, Delhi, Bangalore, Chennai, Pune, Kolkata, Ahmadabad, Baroda,
+                        Chandigarh and Cochin.
+                    </p>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="useful-links">
+                    <div class="footer-heading">
+                        <h4>Useful Links</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li><a asp-area="" asp-page="/Index"><i class="fa fa-stop"></i>Home</a></li>
+                                <li><a asp-area="" asp-page="/Privacy"><i class="fa fa-stop"></i>About</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li><a asp-area="JobView" asp-controller="Home" asp-action="Index"><i class="fa fa-stop"></i>Jobs</a></li>
+
+                                <li><a href="#"><i class="fa fa-stop"></i>Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="contact-info">
+                    <div class="footer-heading">
+                        <h4>Contact Information</h4>
+                    </div>
+                    <p><i class="fa fa-map-marker"></i> Sector 135 Greater Noida, India</p>
+                    <ul>
+                        <li><span>Phone:</span><a href="#">+91 9990090216</a></li>
+                        <li><span>Email:</span><a href="#">Job@Portal.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="sub-footer">
+    <p>Copyright © 2022 Online Job Portal - Created by:Pranjal Singh</p>
+</div>

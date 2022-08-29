@@ -1,0 +1,79 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using JobPortal.Web.Areas.JobView.ViewModels
+@model ShowJobViewModel
+
+@{
+}
+<body> 
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="JobCategoryId" class="control-label"></label>
+                <select asp-for="JobCategoryId" class ="form-control" asp-items="ViewBag.JobCategoryId"></select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Show Jobs</button>
+        </form>
+    </div>
+</div>
+
+@if(Model != null && Model.JobDetail != null)
+{
+    <form method="post">
+        <div class="card-columns mt-3">
+            @foreach(var item in Model.JobDetail) 
+            {
+                <div class="card">
+                    <div class="card-body text-light"  style="background-color:rgb(40, 40, 43)">
+                        <div class="card-title"> Company Name: @item.CompanyName </div>
+                        <div class="card-title">Required Experience: @item.Experience </div>
+                        <div class="card-title">CTC: @item.CTC </div>
+                        <div class="card-title">Location: @item.Location </div>
+                        <div class="card-title">Job Discription: @item.JobDiscription </div>
+                        
+                    </div>
+                    <div class="card-footer" style="text-align:center">
+                        <button class="btn btn-sm btn-dark btn-primary" type="submit"
+                                asp-area="Portal" asp-controller="CandidateDetails" 
+                                asp-action="Create" asp-route-id="@item.JobCategoryId">
+                            Apply
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    </form>
+}
+
+</body>
+
+
+
+@*<form class="form-inline mt-md-3" method="get" asp-area="Portal" asp-controller="JobDetails" asp-action="Index">
+    
+<label for="SearchString"> </label>
+
+<select name="SearchString" id="Products">
+    <option value="">Select Category</option>
+    <option value="">Non Technical</option>
+    <option value="">Data Entry</option>
+
+</select>
+<input type="submit" value="Search" class="btn btn-dark" />
+</form>*@
+
+
+
+
+
+
+@section HeadScripts {
+    <style>
+       
+    </style>
+}

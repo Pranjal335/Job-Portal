@@ -1,0 +1,62 @@
+﻿@model JobPortal.Web.Models.CandidateDetail
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="text-align:center">Details</h1>
+
+<div style="margin: auto;
+  width: 40%;
+  border: 3px solid black;
+  padding: 10px;">
+    <h4 style="text-align:center">Candidate Detail</h4>
+    <hr />
+    <div >
+        <section>
+            <form asp-action="Details">
+                <dl class="row">
+
+                    <dt class="col-6">
+                        @Html.DisplayNameFor(model => model.CandidateFirstName)
+                    </dt>
+                    <dd class="col-6">
+                        @Html.DisplayFor(model => model.CandidateFirstName)
+                    </dd>
+                    <dt class="col-6">
+                        @Html.DisplayNameFor(model => model.CandidateLastName)
+                    </dt>
+                    <dd class="col-6">
+                        @Html.DisplayFor(model => model.CandidateLastName)
+                    </dd>
+                    <dt class="col-6">
+                        @Html.DisplayNameFor(model => model.CandidateEmailId)
+                    </dt>
+                    <dd class="col-6">
+                        @Html.DisplayFor(model => model.CandidateEmailId)
+                    </dd>
+                    <dt class="col-6">
+                        @Html.DisplayNameFor(model => model.DateofBirth)
+                    </dt>
+                    <dd class="col-6">
+                        @Html.DisplayFor(model => model.DateofBirth)
+                    </dd>
+                    <dt class="col-6">
+                        @Html.DisplayNameFor(model => model.CandidateExperience)
+                    </dt>
+                    <dd class="col-6">
+                        @Html.DisplayFor(model => model.CandidateExperience)
+                    </dd>
+                    <dt class="col-6">
+                        @Html.DisplayNameFor(model => model.JobDetail.CompanyName)
+                    </dt>
+                    <dd class="col-6">
+                        @Html.DisplayFor(model => model.JobDetail.CompanyName)
+                    </dd>
+                </dl>
+            </form>
+            <a  asp-action="Index1" class="btn btn-dark">  Submit</a>
+        </section>
+    </div>
+
+</div>
